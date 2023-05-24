@@ -4,4 +4,12 @@
     <div><p><%= @restaurant.address %></p></div>
     <div><p><%= @restaurant.phone_number %></p></div>
   </div>
+   <h4> Reviews </h4>
+   <div>
+    <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content%> - <%= review.rating%></li>
+    <% end %>
+    </ul>
+  </div>
 </div>
